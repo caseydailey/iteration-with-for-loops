@@ -18,8 +18,8 @@ for (i = 5; i <= 120; i+=10) {
 //Write a for loop with a counter variable initialized at 4096. Each time the loop executes divide the counter variable's value by 2. 
 //Use console.log() to output its value every time. When the counter variable's value is 1, stop execution.
 
-for (i = 4096; i >= 1; i/=2) {                            //end it at 1 so we dont try to divide 0 by 2
-	var countdown = "Quotient value is " + i + ".";
+for (i = 4096; i >= 1; i/=2) {                            //end it at 1 so we dont try to divide 0 by 2 and spiral out of control!
+	var countdown = "Quotient value is " + i + ".";        //why do i not get 1 and .5 ?
 	console.log(countdown);
 }
 
