@@ -6,7 +6,7 @@
 
 
 
-for (i = 5; i <= 120; i+=10) {
+for (i = 5; i <= 120; i+=10) {                    
 	var count = "Tens value is " + i + ".";
 	console.log(count);
 }
@@ -18,7 +18,7 @@ for (i = 5; i <= 120; i+=10) {
 //Write a for loop with a counter variable initialized at 4096. Each time the loop executes divide the counter variable's value by 2. 
 //Use console.log() to output its value every time. When the counter variable's value is 1, stop execution.
 
-for (i = 4096; i >= 1; i/=2) {
+for (i = 4096; i >= 1; i/=2) {                            //end it at 1 so we dont try to divide 0 by 2
 	var countdown = "Quotient value is " + i + ".";
 	console.log(countdown);
 }
@@ -78,20 +78,19 @@ var presidents = ['George Washington',
 'an asshole'
 ];
 
+for (i=0; i < presidents.length; i++) {
+  var tense = 'was';                                                                  //using tense as a flag to switch from 'was' to 'is'  --Thanks Joe :)
+  if (i == presidents.length - 1) {tense = 'is'}
+	var pres = "President # " + (i + 1) + " " + tense + " an " + presidents[i] + ".";  //gotta add 1 to [i] to offset the zero base
+	console.log(pres);
+}
 
-//for (i=0; i < presidents.length; i++) {
-//  var tense = 'was';
-//  if (i == presidents.length - 1) {tense = 'is'}
-//	var pres = "President # " + (i + 1) + " " + tense + " an " + presidents[i] + ".";
-//	console.log(pres);
-//}
-//
-//  Then there's this:
+//  and just to try:
 
-presidents.forEach((president, i) => {
-  let tense = (i == presidents.length -1) ? "is" : "was";
-  var chiefs = `President # ${i+1} ${tense} an ${presidents[i]}.`;
-  console.log(chiefs);
+presidents.forEach((president, i) => {                                      //forEach() gets element and elements index
+  let tense = (i == presidents.length -1) ? "is" : "was";                   //this is so presidents[45] is present tense
+  var chiefs = `President # ${i+1} ${tense} an ${presidents[i]}.`;          //string templates to more intuitively input values to the string
+  console.log(chiefs);                                                      //put it all in a variable and log it to the console!
 });
 
 //Object iteration
@@ -113,7 +112,7 @@ var antSpecies = {
   jackJumper: {}
 };
 
-for(var prop in antSpecies) {
+for(var prop in antSpecies) {       
 	console.log(prop);
 }
 
